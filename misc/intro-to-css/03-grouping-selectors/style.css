@@ -1,0 +1,14 @@
+.b-left,
+.b-right {
+    font-size: 28px;
+    font-family: "Helvetica", "Times New Roman", sans-serif;
+}
+
+.b-left {
+    background-color: black;
+    color: white;
+}
+
+.b-right {
+    background-color: yellow;
+}
