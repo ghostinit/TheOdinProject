@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    font-family: Roboto, serif;
+    align-items: center;
+    background-color: #1F2937;
+    margin: 0;
+    color: #F9FAF8;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.header-logo {
+    font-size: 24px;
+    margin-right: auto;
+    font-weight: 900;
+}
+
+.header-links {
+    display: flex;
+    gap: 20px;
+}
+
+.header-link {
+    font-size: 18px;
+    color: #E5E7EB;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*
+=================== HERO =====================
+*/
+
+.hero {
+    background-color: #1F2937;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.hero-content {
+    display: flex;
+}
+
+.hero-left,
+.hero-right {
+    flex: 1;
+}
+
+
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-banner {
+    font-size: 48px;
+    font-weight: 900;
+    color: #F9FAF8;
+}
+
+.hero-subtext {
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+.signup-button {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: none;
+    font-family: Roboto, serif;
+    border-radius: 8px;
+}
+
+.hero-img {
+    max-width: 400px;
+    height: auto;
+}
