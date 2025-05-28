@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 body {
     display: flex;
     flex-direction: column;
@@ -21,7 +20,9 @@ body {
     font-family: Roboto, serif, sans-serif;
 }
 
-
+/*
+=============================== HEADER ==================================
+*/
 
 .header {
     display: flex;
@@ -84,8 +85,6 @@ ul {
     padding-top: 25px;
 }
 
-
-
 .hero-right {
     display: flex;
     justify-content: center;
@@ -101,8 +100,6 @@ ul {
     font-size: 18px;
     color: #E5E7EB;
 }
-
-
 
 .signup-button {
     background-color: #3882F6;
@@ -131,8 +128,6 @@ ul {
 
 }
 
-
-
 .info-header {
     font-size: 36px;
     color: #1F2937;
@@ -159,8 +154,6 @@ ul {
     border-radius: 10px;
 }
 
-
-
 .card-info {
     text-align: center;
     font-size: 13px;
@@ -180,9 +173,6 @@ ul {
     justify-content: center;
 }
 
-
-
-
 .quote-body {
     max-width: 450px;
     padding-top: 40px;
@@ -192,8 +182,6 @@ ul {
     font-style: italic;
     align-self: center;
 }
-
-
 
 .quote-source {
     text-align: right;
@@ -226,17 +214,12 @@ ul {
     padding: 20px;
 }
 
-
-
 .call-text {
-
     font-family: Roboto, serif, sans-serif;
-
     color: #E5E7EB;
     padding-left: 65px;
     padding-right: 65px;
     flex: 3;
-
 }
 
 .call-heading {
@@ -255,7 +238,6 @@ ul {
 }
 
 .call-button {
-
     background-color: #3882F6;
     color: #F9FAF8;
     padding: 5px;
@@ -276,5 +258,4 @@ ul {
     height: 50px;
     background-color: #1F2937;
     color: #E5E7EB;
-
 }
