@@ -1,0 +1,25 @@
+html {
+	background-color: rgb(0, 180, 180)
+}
+
+h1 {
+	text-align: center;
+}
+
+.img-center {
+	display: block;
+	margin: 0px auto;
+}
+
+.ing-box,
+.div-box{
+	border: 2px solid black;
+	padding: 10px;
+	margin: 10px;
+}
+
+.div-box {
+	text-align: center;	
+}
+
+
