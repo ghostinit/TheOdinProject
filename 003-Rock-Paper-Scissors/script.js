@@ -31,3 +31,4 @@ function scissorClick() {
     clickChoice = options[2];
     decideWinner();
 }
+scissorButton.addEventListener("click", scissorButton);
