@@ -9,6 +9,7 @@
     <h1>Hello friend! 👋</h1>
     <p>Would you like to play a game?</p>
     <p>Pick below... rock paper scissors</p>
+    <p>First player to 10 wins!</p>
     <div class="playerChoices" style="display: inline">
         <button class="buttonRock" style="margin: 10px; padding: 5px;">Rock</button>
         <button class="buttonPaper" style="margin: 10px; padding: 5px;">Paper</button>
@@ -16,7 +17,7 @@
     </div>
     <p class="computerChoiceText"></p>
     <p class="outcome"></p>
-    <div class="scores" style="display: inline;">
+    <div class="scores" style="display: flex; gap: 20px">
         <div class="playerScore">
             <p>Human</p>
             <p class="playerScoreText">0</p>
@@ -26,6 +27,13 @@
             <p class="computerScoreText">0</p>
         </div>
     </div>
+
+    <div class="finalOutcome" style="display: flex; flex-direction: column;">
+        <p>GAME OVER!</p>
+        <p class="finalOutcomeMessage"></p>
+        <button class="resetButton" style="margin: 10px; padding: 5px;">Go Again!</button>
+    </div>
+
 
     <!-- Link to external script -->
     <script src="script.js"></script>
