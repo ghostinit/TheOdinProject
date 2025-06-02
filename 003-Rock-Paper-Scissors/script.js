@@ -5,6 +5,10 @@ const startGameButton = document.querySelector("#startGameButton");
 
 const playerChoices = document.querySelector("#playerChoices");
 const scoreBoard = document.querySelector("#scoreBoard");
+const scoreTitle = document.querySelector("#scoreTitle");
+const gameOverMessage = document.querySelector("#gameOver");
+const finalScore = document.querySelector("#finalScore");
+const resetButton = document.querySelector("#resetGameButton");
 
 const rockButton = document.querySelector("#buttonRock");
 const paperButton = document.querySelector("#buttonPaper");
@@ -27,7 +31,7 @@ const computerDisplay = document.querySelector("#computerChoiceDisplay");
 const options = ["rock", "paper", "scissors"];
 const outcomes = ["You Win", "Computer Wins", "Tie"]
 
-const maxScore = 10;
+const maxScore = 5;
 
 let gameOver = false;
 
@@ -37,6 +41,16 @@ let winner;
 
 let playerScore = 0;
 let computerScore = 0;
+
+function doGameOver() {
+    gameOver = true;
+    scoreTitle.classList.add("hidden");
+    gameOverMessage.classList.remove("hidden");
+    finalScore.classList.remove("hidden");
+    resetButton.classList.remove("hidden");
+    playerChoices.classList.add("hidden");
+    roundResults.classList.add("hidden");
+}
 
 function decideWinner() {
     console.log("User clicked " + clickChoice);
@@ -133,17 +147,21 @@ function scissorClick() {
 }
 scissorButton.addEventListener("click", scissorClick);
 
-// function resetButtonClick() {
-//     if (gameOver) {
-//         playerScore = 0;
-//         computerScore = 0;
-//         gameOver = false;
-//         playerScoreText.textContent = playerScore;
-//         computerScoreText.textContent = computerScore;
-//         finalOutcomeDiv.style.display = "none";
-//     }
-// }
-// resetButton.addEventListener("click", resetButtonClick);
+function resetButtonClick() {
+    if (gameOver) {
+        playerScore = 0;
+        computerScore = 0;
+        gameOver = false;
+        playerScoreText.textContent = playerScore;
+        computerScoreText.textContent = computerScore;
+        scoreTitle.classList.remove("hidden");
+        gameOverMessage.classList.add("hidden");
+        finalScore.classList.add("hidden");
+        resetButton.classList.add("hidden");
+        playerChoices.classList.remove("hidden");
+    }
+}
+resetButton.addEventListener("click", resetButtonClick);
 
 function startGame() {
     welcomeDiv.classList.add("hidden");

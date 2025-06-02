@@ -20,21 +20,28 @@
         <div id="welcome" class="flex-col text-center p-5">
             <p>Would you like to play a game?</p>
             <p>Pick below... rock paper scissors</p>
-            <p>First player to 10 wins!</p>
+            <p>First player to 5 wins!</p>
             <button id="startGameButton" class="bg-blue-500 pt-2 pb-2 pl-4 pr-4 mt-4 border rounded-full">Start</button>
         </div>
-        <div id="scoreBoard" class="hidden mt-10 flex-col">
-            <h3 class="text-center text-2xl">Scoreboard</h3>
+        <div id="scoreBoard" class="hidden mt-10 flex-col text-4xl align-items text-center">
+            <h3 id="scoreTitle" class="text-center text-2xl">Scoreboard</h3>
+
+            <h1 id="gameOver" class="hidden text-center text-4xl">GAME OVER!</h1>
+            <h3 id="finalScore" class="hidden text-center text-3xl">FINAL SCORE</h3>
             <div class="flex justify-center gap-20">
                 <div id="playerScore" class="text-center">
-                    <p>Human</p>
-                    <p id="playerScoreText">0</p>
+                    <p class="text-3xl">Human</p>
+                    <p id="playerScoreText" class="text-2xl">0</p>
                 </div>
                 <div id="computerScore" class="text-center">
-                    <p>Computer</p>
-                    <p id="computerScoreText">0</p>
+                    <p class="text-3xl">Computer</p>
+                    <p id="computerScoreText" class="text-2xl">0</p>
                 </div>
             </div>
+            <button id="resetGameButton"
+                class="hidden text-lg bg-blue-500 pt-2 pb-2 pl-4 pr-4 mt-4 border rounded-full">Play
+                Again</button>
+
         </div>
         <div id="playerChoices" class="hidden flex justify-center gap-10 mt-10 mb-15">
             <button id="buttonRock">
