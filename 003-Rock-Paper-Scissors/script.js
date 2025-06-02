@@ -16,6 +16,13 @@ const outcomeText = document.querySelector("#outcome");
 const playerScoreText = document.querySelector("#playerScoreText");
 const computerScoreText = document.querySelector("#computerScoreText");
 
+const roundResults = document.querySelector("#roundResults");
+const playerImage = document.querySelector("#playerChoiceImage");
+const computerImage = document.querySelector("#computerChoiceImage");
+
+const playerDisplay = document.querySelector("#playerChoiceDisplay");
+const computerDisplay = document.querySelector("#computerChoiceDisplay");
+
 
 const options = ["rock", "paper", "scissors"];
 const outcomes = ["You Win", "Computer Wins", "Tie"]
@@ -36,24 +43,35 @@ function decideWinner() {
 
     console.log("Deciding winner");
     let computerChoice = options[Math.floor(Math.random() * 3)];
-    computerChoiceText.textContent = "The computer chose: " + computerChoice;
+
+    if (computerChoice === "rock") {
+        computerImage.src = "images/rock.jpg";
+    } else if (computerChoice === "paper") {
+        computerImage.src = "images/paper.png";
+    } else if (computerChoice === "scissors") {
+        computerImage.src = "images/scissors.png";
+    }
+
     let intOutcome
 
     if (computerChoice === clickChoice) {
         intOutcome = 2;
     } else if (computerChoice === "rock") {
+
         if (clickChoice === "paper") {
             intOutcome = 0; // Player Wins
         } else {
             intOutcome = 1; // Computer Wins
         }
     } else if (computerChoice === "paper") {
+
         if (clickChoice === "scissors") {
             intOutcome = 0; // Player Wins
         } else {
             intOutcome = 1; // Computer WinsresetButton
         }
     } else if (computerChoice === "scissors") {
+
         if (clickChoice === "rock") {
             intOutcome = 0; // Player Wins
         } else {
@@ -63,12 +81,19 @@ function decideWinner() {
 
     if (intOutcome === 0) { //Player wins
         playerScore++;
+        playerDisplay.style.borderColor = "green";
+        computerDisplay.style.borderColor = "red";
     }
     else if (intOutcome === 1) { // Computer wins
         computerScore++;
+        playerDisplay.style.borderColor = "red";
+        computerDisplay.style.borderColor = "green";
+    } else if (intOutcome === 2) {
+
+        playerDisplay.style.borderColor = "white";
+        computerDisplay.style.borderColor = "white";
     }
-    outcome = outcomes[intOutcome];
-    outcomeText.textContent = outcome;
+    roundResults.classList.remove("hidden");
     playerScoreText.textContent = playerScore;
     computerScoreText.textContent = computerScore;
 
@@ -83,6 +108,7 @@ function decideWinner() {
 
 function rockClick() {
     if (!gameOver) {
+        playerImage.src = "images/rock.jpg";
         clickChoice = options[0];
         decideWinner();
     }
@@ -91,6 +117,7 @@ rockButton.addEventListener("click", rockClick);
 
 function paperClick() {
     if (!gameOver) {
+        playerImage.src = "images/paper.png";
         clickChoice = options[1];
         decideWinner();
     }
@@ -99,6 +126,7 @@ paperButton.addEventListener("click", paperClick);
 
 function scissorClick() {
     if (!gameOver) {
+        playerImage.src = "images/scissors.png";
         clickChoice = options[2];
         decideWinner();
     }
