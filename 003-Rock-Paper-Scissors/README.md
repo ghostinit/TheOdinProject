@@ -20,3 +20,17 @@ We recommend not doing that, and saving this effort for your portfolio projects.
 I couldn't help but laugh cause they called me on it.
 
 As well, due to the fact that I am trying to keep all my Odin Project work in a single repo I posted the live solution to my own domain at https://rock-paper-scissors.nullrider.com
+
+# UPDATE
+Update gui to use a basic implementation of Tailwind CSS.  There was no additional functionality added because it didn't seem to need it.
+
+Among UI changes:
+* Dark mode
+* Centered elements
+* Better use of flexboxes for mobile response
+* Added clipart images for the user selection buttons
+* Added 'round result' area to better show the user the results
+    * Images for both player and computer choice
+    * Borders change color based on who won or if it was a tie
+
+Overall a much better user experience!
