@@ -1,20 +1,21 @@
 console.log("Welcome to Rock, Paper, Scissors!");
 
-const rockButton = document.querySelector(".buttonRock");
-const paperButton = document.querySelector(".buttonPaper");
-const scissorButton = document.querySelector(".buttonScissors");
+const welcomeDiv = document.querySelector("#welcome");
+const startGameButton = document.querySelector("#startGameButton");
 
-const computerChoiceText = document.querySelector(".computerChoiceText");
-const outcomeText = document.querySelector(".outcome");
+const playerChoices = document.querySelector("#playerChoices");
+const scoreBoard = document.querySelector("#scoreBoard");
 
-const playerScoreText = document.querySelector(".playerScoreText");
-const computerScoreText = document.querySelector(".computerScoreText");
+const rockButton = document.querySelector("#buttonRock");
+const paperButton = document.querySelector("#buttonPaper");
+const scissorButton = document.querySelector("#buttonScissors");
 
-const finalOutcomeMessage = document.querySelector(".finalOutcomeMessage");
+const computerChoiceText = document.querySelector("#computerChoiceText");
+const outcomeText = document.querySelector("#outcome");
 
-const resetButton = document.querySelector(".resetButton");
+const playerScoreText = document.querySelector("#playerScoreText");
+const computerScoreText = document.querySelector("#computerScoreText");
 
-const finalOutcomeDiv = document.querySelector(".finalOutcome");
 
 const options = ["rock", "paper", "scissors"];
 const outcomes = ["You Win", "Computer Wins", "Tie"]
@@ -30,17 +31,9 @@ let winner;
 let playerScore = 0;
 let computerScore = 0;
 
-finalOutcomeDiv.style.display = "none";
-
-function doGameOver() {
-    finalOutcomeDiv.style.display = "flex";
-    gameOver = true;
-    finalOutcomeMessage.textContent = winner;
-}
-
 function decideWinner() {
     console.log("User clicked " + clickChoice);
-    
+
     console.log("Deciding winner");
     let computerChoice = options[Math.floor(Math.random() * 3)];
     computerChoiceText.textContent = "The computer chose: " + computerChoice;
@@ -67,7 +60,7 @@ function decideWinner() {
             intOutcome = 1; // Computer Wins
         }
     }
-    
+
     if (intOutcome === 0) { //Player wins
         playerScore++;
     }
@@ -112,14 +105,22 @@ function scissorClick() {
 }
 scissorButton.addEventListener("click", scissorClick);
 
-function resetButtonClick() {
-    if (gameOver) {
-        playerScore = 0;
-        computerScore = 0;
-        gameOver = false;
-        playerScoreText.textContent = playerScore;
-        computerScoreText.textContent = computerScore;
-        finalOutcomeDiv.style.display = "none";
-    }
+// function resetButtonClick() {
+//     if (gameOver) {
+//         playerScore = 0;
+//         computerScore = 0;
+//         gameOver = false;
+//         playerScoreText.textContent = playerScore;
+//         computerScoreText.textContent = computerScore;
+//         finalOutcomeDiv.style.display = "none";
+//     }
+// }
+// resetButton.addEventListener("click", resetButtonClick);
+
+function startGame() {
+    welcomeDiv.classList.add("hidden");
+    playerChoices.classList.remove("hidden");
+    scoreBoard.classList.remove("hidden");
 }
-resetButton.addEventListener("click", resetButtonClick);
+startGameButton.addEventListener("click", startGame);
+

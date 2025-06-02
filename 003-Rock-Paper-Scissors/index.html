@@ -12,47 +12,41 @@
 <body class="bg-white dark:bg-gray-900 text-black dark:text-white">
 
     <div class="flex-col">
-        <h1 class="mt-10 text-center text-3xl font-medium">Hello friend!</h1>
-        <div class="flex-col text-center p-5">
+        <div class="flex gap-10 justify-center mt-10">
+            <a class="text-3xl font-medium">ROCK</a>
+            <a class="text-3xl font-medium">PAPER</a>
+            <a class="text-3xl font-medium">SCISSORS</a>
+        </div>
+        <div id="welcome" class="flex-col text-center p-5">
             <p>Would you like to play a game?</p>
             <p>Pick below... rock paper scissors</p>
             <p>First player to 10 wins!</p>
+            <button id="startGameButton" class="bg-blue-500 pt-2 pb-2 pl-4 pr-4 mt-4 border rounded-full">Start</button>
         </div>
-        <div class="playerChoices flex justify-center gap-10">
-            <button class="buttonRock">
-                <img src="images/rock.jpg" alt="Rock" class="w-20 h-20">
-            </button>
-            <button class="buttonPaper">
-                <img src="images/paper.png" alt="Paper" class="w-20 h-20">
-            </button>
-            <button class="buttonScissors">
-                <img src="images/scissors.png" alt="Scissors" class="w-20 h-20">
-            </button>
-        </div>
-        <p class="computerChoiceText"></p>
-        <p class="outcome"></p>
-        <div class="scores flex-col">
+        <div id="scoreBoard" class="hidden mt-10 flex-col">
             <h3 class="text-center text-2xl">Scoreboard</h3>
             <div class="flex justify-center gap-20">
-                <div class="playerScore text-center">
+                <div id="playerScore" class="text-center">
                     <p>Human</p>
-                    <p class="playerScoreText">0</p>
+                    <p id="playerScoreText">0</p>
                 </div>
-                <div class="computerScore text-center">
+                <div id="computerScore" class="text-center">
                     <p>Computer</p>
-                    <p class="computerScoreText">0</p>
+                    <p id="computerScoreText">0</p>
                 </div>
             </div>
         </div>
-
-        <div class="finalOutcome" style="display: flex; flex-direction: column;">
-            <p>GAME OVER!</p>
-            <p class="finalOutcomeMessage"></p>
-            <button class="resetButton" style="margin: 10px; padding: 5px;">Go Again!</button>
+        <div id="playerChoices" class="hidden flex justify-center gap-10 mt-10">
+            <button id="buttonRock">
+                <img src="images/rock.jpg" alt="Rock" class="w-20 h-20">
+            </button>
+            <button id="buttonPaper">
+                <img src="images/paper.png" alt="Paper" class="w-20 h-20">
+            </button>
+            <button id="buttonScissors">
+                <img src="images/scissors.png" alt="Scissors" class="w-20 h-20">
+            </button>
         </div>
-
-
-
     </div>
     <!-- Link to external script -->
 
