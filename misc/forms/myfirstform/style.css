@@ -7,6 +7,8 @@
     --color-base-bg: rgb(18, 18, 18);
     --color-base-text: rgb(240, 240, 240);
     --color-btn-bg: rgb(36, 36, 36);
+    --color-btn-bg-active: rgb(10, 10, 10);
+    --color-txt-input-bg: rgb(70, 70, 70);
 }
 
 :root.light {
@@ -14,6 +16,8 @@
     --color-base-bg: rgb(240, 240, 240);
     --color-base-text: rgb(18, 18, 18);
     --color-btn-bg: rgb(220, 220, 220);
+    --color-btn-bg-active: rgb(200, 200, 200);
+    --color-txt-input-bg: rgb(200, 200, 200);
 }
 
 .themed-btn {
@@ -23,10 +27,17 @@
     font-size: 1.125rem;
     padding: 10px 20px;
     border-radius: var(--btn-border-radius);
+    box-sizing: border-box;
 }
+
 
 .themed-btn:focus {
     outline: var(--border-btn);
+}
+
+.themed-btn:active {
+    transform: translate(0px, -1px) scale(.98);
+    background: var(--color-btn-bg-active);
 }
 
 .toggle-theme-btn {
@@ -36,7 +47,7 @@
 }
 
 .themed-text-input {
-    background-color: var(--color-base-bg);
+    background-color: var(--color-txt-input-bg);
     color: var(--color-base-text)
 }
 
@@ -76,4 +87,11 @@ textarea {
     width: 300px;
     box-sizing: border-box;
     border: var(--border-btn);
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+textarea {
+    max-width: 300px;
+    min-width: 300px;
 }
