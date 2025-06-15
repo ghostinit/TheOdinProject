@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form Exercise 2</title>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <button class="themed-btn toggle-theme-btn">Toggle Theme</button>
+    <div class="title">
+        <h1>Form Exercise 2</h1>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <form action="/my-handling-page-form-page" method="post">
+
+            <fieldset>
+                <legend>Who is your favorite pony?</legend>
+                <ul>
+                    <li>
+                        <label for="pinkie" class="radio-label" style="margin-right: 15px">
+                            <input type="radio" id="pinkie" name="ponies" checked>
+                            Pinkie Pie
+                        </label>
+
+                    </li>
+                    <li>
+                        <label for="rainbow" class="radio-label" style="margin-right: 15px">
+                            <input type="radio" id="rainbow" name="ponies">
+                            Rainbow Dash
+                        </label>
+
+                    </li>
+                    <li>
+                        <label for="twilight" class="radio-label">
+                            <input type="radio" id="twilight" name="ponies">
+                            Twilight Sparkle
+                        </label>
+
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Hotdog preferences</legend>
+                <ul>
+                    <li>
+                        <label for="vegan" class="radio-label" style="margin-right: 15px; min-width: 10ch;">
+                            <input type="checkbox" id="vegan" name="vegan">
+                            Vegan
+                        </label>
+
+                    </li>
+                    <li>
+                        <label for="onions" class="radio-label" style="margin-right: 15px; min-width: 10ch;">
+                            <input type="checkbox" id="onions" name="onions">
+                            Onions
+                        </label>
+
+                    </li>
+                    <li>
+                        <label for="cheese" class="radio-label" style="margin-right: 15px; min-width: 10ch;">
+                            <input type="checkbox" id="cheese" name="cheese">
+                            Cheese
+                        </label>
+
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <label for="relish" class="radio-label" style="margin-right: 15px; min-width: 10ch;">
+                            <input type="checkbox" id="relish" name="relish">
+                            Relish
+                        </label>
+
+                    </li>
+                    <li>
+                        <label for="mustard" class="radio-label" style="margin-right: 15px; min-width: 10ch;">
+                            <input type="checkbox" id="mustard" name="mustard">
+                            Mustard
+                        </label>
+
+                    </li>
+                    <li>
+                        <label for="salsa" class="radio-label" style="margin-right: 15px; min-width: 10ch;">
+                            <input type="checkbox" id="salsa" name="salsa">
+                            Salsa
+                        </label>
+
+                    </li>
+                </ul>
+            </fieldset>
+            <button type="submit" class="themed-btn">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

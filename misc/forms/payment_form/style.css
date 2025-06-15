@@ -1,0 +1,122 @@
+:root {
+    --btn-border-radius: 10px;
+}
+
+:root.dark {
+    --border-btn: 1px solid rgb(220, 220, 220);
+    --color-base-bg: rgb(18, 18, 18);
+    --color-base-text: rgb(240, 240, 240);
+    --color-btn-bg: rgb(36, 36, 36);
+    --color-btn-bg-active: rgb(10, 10, 10);
+    --color-txt-input-bg: rgb(70, 70, 70);
+}
+
+:root.light {
+    --border-btn: 1px solid rgb(36, 36, 36);
+    --color-base-bg: rgb(240, 240, 240);
+    --color-base-text: rgb(18, 18, 18);
+    --color-btn-bg: rgb(220, 220, 220);
+    --color-btn-bg-active: rgb(200, 200, 200);
+    --color-txt-input-bg: rgb(200, 200, 200);
+}
+
+.themed-btn {
+    color: var(--color-base-text);
+    background-color: var(--color-btn-bg);
+    border: var(--border-btn);
+    font-size: 1.125rem;
+    padding: 10px 20px;
+    border-radius: var(--btn-border-radius);
+    box-sizing: border-box;
+}
+
+
+.themed-btn:focus {
+    outline: var(--border-btn);
+}
+
+.themed-btn:active {
+    transform: translate(0px, -1px) scale(.98);
+    background: var(--color-btn-bg-active);
+}
+
+.toggle-theme-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.themed-text-input {
+    background-color: var(--color-txt-input-bg);
+    color: var(--color-base-text)
+}
+
+body {
+    background-color: var(--color-base-bg);
+    color: var(--color-base-text);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+
+}
+
+/* Non standard stuff */
+form {
+    border: var(--border-btn);
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+fieldset {
+    border: var(--border-btn);
+    border-radius: 10px;
+}
+
+.radio-label {
+    display: inline-block;
+    text-align: left;
+}
+
+
+.text-input {
+    font: 1em sans-serif;
+    width: 300px;
+    background: var(--color-txt-input-bg);
+    color: var(--color-base-text);
+    box-sizing: border-box;
+    border: var(--border-btn);
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.text-input-label {
+    font-size: 1.25em;
+    display: inline-block;
+    min-width: 15ch;
+    text-align: right;
+    margin-right: 2px;
+}
+
+select {
+    background: var(--color-txt-input-bg);
+    color: var(--color-base-text);
+    border: var(--border-btn);
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+label {
+    vertical-align: top;
+}
+
+/* textarea {
+    max-width: 300px;
+    min-width: 300px;
+} */

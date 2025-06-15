@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>File Picker</title>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <button class="themed-btn toggle-theme-btn">Toggle Theme</button>
+    <div class="title">
+        <h1>File Picker</h1>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <form action="/my-handling-page-form-page" method="post">
+
+
+            <label for="images" class="themed-btn">Select Images(PNG, JPG)</label>
+            <input type="file" name="files" id="images" accept=".png, .jpg, .jpeg" multiple hidden>
+            <br>
+            <button type="submit" class="themed-btn">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
