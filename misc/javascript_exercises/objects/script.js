@@ -113,25 +113,33 @@
 // // This one also has it, why? fix please.
 // console.log(lazy.stomach); // apple
 
-function Foo() {
-    this.evil = function SubFoo() {
-        this.sorcery = "Evil Magic";
-    }
+// function Foo() {
+//     this.evil = function SubFoo() {
+//         this.sorcery = "Evil Magic";
+//     }
+// }
+
+// console.log(`Foo.__proto__ = ${Foo.__proto__}`);
+// console.log(`Foo.prototype = ${Foo.prototype}`);
+// // console.log(`Foo.evil.__proto__ = ${Foo.evil.__proto__}`);
+// // console.log(`Foo.evil.prototype = ${Foo.evil.prototype}`);
+
+// const bar = new Foo();
+
+// console.log(`bar.__proto__ = ${bar.__proto__}`);
+// console.log(`bar.prototype = ${bar.prototype}`);
+// console.log(`bar.evil.__proto__ = ${bar.evil.__proto__}`);
+// console.log(`bar.evil.prototype = ${bar.evil.prototype}`);
+
+// const evilFoo = new bar.evil();
+
+// console.log(`evilFoo.__proto__ = ${evilFoo.__proto__}`);
+// console.log(`evilFoo.prototype = ${evilFoo.prototype}`);
+
+function User(name) {
+    this.name = name;
+    console.log(this);
 }
 
-console.log(`Foo.__proto__ = ${Foo.__proto__}`);
-console.log(`Foo.prototype = ${Foo.prototype}`);
-// console.log(`Foo.evil.__proto__ = ${Foo.evil.__proto__}`);
-// console.log(`Foo.evil.prototype = ${Foo.evil.prototype}`);
-
-const bar = new Foo();
-
-console.log(`bar.__proto__ = ${bar.__proto__}`);
-console.log(`bar.prototype = ${bar.prototype}`);
-console.log(`bar.evil.__proto__ = ${bar.evil.__proto__}`);
-console.log(`bar.evil.prototype = ${bar.evil.prototype}`);
-
-const evilFoo = new bar.evil();
-
-console.log(`evilFoo.__proto__ = ${evilFoo.__proto__}`);
-console.log(`evilFoo.prototype = ${evilFoo.prototype}`);
+const me = new User("Me!");
+const you = new User("you!");
